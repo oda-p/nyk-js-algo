@@ -2,6 +2,8 @@ const getMaxSum = (arr) => {
     let answer=Number.MIN_SAFE_INTEGER;
     let n=arr.length;
     let sum2;
+
+    // 가로 세로 합
     let sum1 = sum2 = 0;
     for(let i=0; i<n; i++){
         sum1=sum2=0;
@@ -11,6 +13,8 @@ const getMaxSum = (arr) => {
         }
         answer=Math.max(answer, sum1, sum2);
     }
+
+    // 대각선 합
     sum1=sum2=0;
     for(let i=0; i<n; i++){
         sum1+=arr[i][i];
